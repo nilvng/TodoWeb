@@ -1,0 +1,23 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "backend with auth and to be deployed",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "node server"
+  },
+  "author": "Nil Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.7"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
