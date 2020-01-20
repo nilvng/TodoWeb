@@ -1,8 +1,9 @@
+const dotenv = require("dotenv")
+dotenv.config()
 let app = require('express')()
 let mongoose = require('mongoose')
 let bodyParser = require('body-parser')
-const dotenv = require("dotenv")
-dotenv.config()
+
 var port = process.env.PORT || 5000
 
 let apiRoutes = require('./routes/api-routes')

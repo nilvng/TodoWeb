@@ -1,0 +1,71 @@
+{
+    "version": 2,
+    "builds": [{ "src": "server.js", "use": "@now/node-server" }],
+    "env":{
+      "DB_CONNECT":"mongodb+srv://dbTodo:nuvzo2-teghyg-xajpeX@nil-space-l41al.mongodb.net/test?retryWrites=true&w=majority",
+      "ACCESS_TOKEN_SECRET": "c5c79d865485e2daf6f61ab726ee5243f4039440dacd134117be2286a407b33fc20582e994334d04883f1fda2cf12c09e2410a9ffaee4aa5e3051dcb305d9ea6",
+      "REFRESH_TOKEN_SECRET": "bf8e7a8993139dbf6d03f09a6cf3ae35c3e6546e784a7cf6030246b5716f229c87151bae1c80fa28aec3fb84ba9d530c2fdc03c080ffbf502acde4939b059b1b"
+    },
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/server.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/todos",
+        "dest": "/server.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/todos",
+        "dest": "/server.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/todos/:_id",
+        "dest": "/server.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/todos/:_id",
+        "dest": "/server.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/todos/:_id",
+        "dest": "/server.js",
+        "methods": ["PUT"]
+      },
+      {
+        "src": "/todos/:_id",
+        "dest": "/server.js",
+        "methods": ["DELETE"]
+      },
+      {
+        "src": "/todos/:_id",
+        "dest": "/server.js",
+        "methods": ["PATCH"]
+      },
+      {
+        "src": "/todos/sub/:_id",
+        "dest": "/server.js",
+        "methods": ["PUT"]
+      },
+      {
+        "src": "/todos/sub/:_id",
+        "dest": "/server.js",
+        "methods": ["DELETE"]
+      },
+      {
+        "src": "/users/signup",
+        "dest": "/server.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/users/signin",
+        "dest": "/server.js",
+        "methods": ["POST"]
+      }
+    ]
+  }

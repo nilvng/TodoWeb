@@ -1,11 +1,14 @@
 const User = require("../models/user");
-const { userValidation } = require("../middleware/validation");
+// const { userValidation } = require("../middleware/validation");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken")
+const {userValidation} = require("../middleware/userValidation")
 exports.new = async function(req, res) {
-  const { error } = userValidation(req.body);
-  // throw warning when wrong input
-  if (error) return res.status(400).send(error.details[0].message);
+  // const { error } = userValidation(req.body);
+  // // throw warning when wrong input
+  // if (error) return res.status(400).send(error.details[0].message);
+  const {error} = userValidation(req.body)
+  if (error) return res.status(400).send(error)
   // check for double account
   const userExist = await User.findOne({ username: req.body.username });
   if (userExist)
@@ -25,9 +28,11 @@ exports.new = async function(req, res) {
 };
 
 exports.signin = async function(req, res) {
-  const { error } = userValidation(req.body);
+  // const { error } = userValidation(req.body);
   // throw warning when wrong input
-  if (error) return res.status(400).send('Please enter a valid account');
+  // if (error) return res.status(400).send('Please enter a valid account');
+  const error = userValidation(req.body)
+  if (error) return res.status(400).send(error)
   // check if account exists
   const userExist = await User.findOne({ username: req.body.username });
   if (!userExist)

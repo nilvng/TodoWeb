@@ -2,9 +2,13 @@
   "name": "todo-backend",
   "version": "1.0.0",
   "description": "backend with auth and to be deployed",
+  "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "main": "index.js",
   "scripts": {
-    "devStart": "node server"
+    "start": "node server.js"
   },
   "author": "Nil Nguyen",
   "license": "ISC",
@@ -15,6 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mongodb-client-encryption": "^1.0.1",
     "mongoose": "^5.8.7"
   },
   "devDependencies": {

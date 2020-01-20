@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import Background from "./todoBG.jpg";
 // import '../../src/FrontPage.css'
 export default class FrontPage extends Component {
   render() {

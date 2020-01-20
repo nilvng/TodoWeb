@@ -6,7 +6,6 @@ import NotFound from "./Pages/NotFoundPage";
 import LoginPage from "./Pages/LoginPage";
 import RegisterPage from "./Pages/RegisterPage";
 import FrontPage from "./Pages/FrontPage";
-import Collapse from "./Components/views/TaskView";
 // let todoURL = "http://localhost:5000/todos"
 // let userURL = "http://localhost:5000/users"
 export default class App extends Component {
@@ -29,7 +28,7 @@ export default class App extends Component {
       );
     return (
       <div>
-        {this.state.authToken ==''? '':<button className = 'btn btn-danger float-right' onClick = {this.logout}>Log Out</button>}
+        {this.state.authToken ===''? '':<button className = 'btn btn-danger float-right' onClick = {this.logout}>Log Out</button>}
         <Router>
           <FrontPage path="/" />
           <LoginPage
